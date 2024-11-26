@@ -1,5 +1,6 @@
 
 //Graham Michael 11/18/24
+import java.util.ArrayList;
 import java.util.Scanner; // Import Scanner class for user input
 import java.util.Random; // Import Random class for generating random numbers
 
@@ -12,6 +13,7 @@ public class NumberGuessGame {
 
     public static void playGame() {
         // Create a Scanner object to read user input
+        ArrayList<Integer> pastGuesses = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
         // Declare variables for the lower and upper bounds of the range
@@ -48,7 +50,11 @@ public class NumberGuessGame {
             guess = getValidBound("Guess the number: ", scanner);
 
             tries = tries + 1;
-
+        if (pastGuesses.contains(guess)){
+            System.out.println("You already guessed that, try again");
+                continue;
+        }
+        pastGuesses.add(guess);
             if (guess < target) {
                 // If the guess is too low
                 System.out.println("Too low, try again.");
