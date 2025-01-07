@@ -5,15 +5,11 @@ import java.util.Scanner; // Import Scanner class for user input
 import java.util.Random; // Import Random class for generating random numbers
 
 public class NumberGuessGame {
+// Declare variables for the player's guess and number of tries
+int guess = 0;
+int tries = 0;
 
-    public static void main(String[] args) {
-        // Start the game by calling the playGame method
-        for(int i = 0; i < 3; i++){
-        playGame();
-    }
-    }
-
-    public static void playGame() {
+    public void playGame() {
         // Create a Scanner object to read user input
         ArrayList<Integer> pastGuesses = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -42,9 +38,7 @@ public class NumberGuessGame {
         // generates the number
         int target = randomGenerator.nextInt(upperBound - lowerBound + 1) + lowerBound;
 
-        // Declare variables for the player's guess and number of tries
-        int guess = 0;
-        int tries = 0;
+
 
         // Game loop: Continue asking the player for guesses until they guess correctly
         while (guess != target) {
@@ -71,7 +65,7 @@ public class NumberGuessGame {
     }
 
     // Method to get a valid integer input from the user
-    public static int getValidBound(String prompt, Scanner scanner) {
+    public int getValidBound(String prompt, Scanner scanner) {
         // Variable to hold the user's input
         int bound = 0;
 
