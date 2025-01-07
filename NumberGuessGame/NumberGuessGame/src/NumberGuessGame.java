@@ -8,7 +8,9 @@ public class NumberGuessGame {
 
     public static void main(String[] args) {
         // Start the game by calling the playGame method
+        for(int i = 0; i < 3; i++){
         playGame();
+    }
     }
 
     public static void playGame() {
@@ -90,7 +92,6 @@ public class NumberGuessGame {
                 scanner.next();
             }
         }
-
-        return bound;
+       return bound; 
     }
 }
