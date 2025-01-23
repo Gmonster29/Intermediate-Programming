@@ -11,7 +11,8 @@ import java.util.Scanner;
 public class Quiz {
         static Scanner sc = new Scanner(System.in);
 
-        public static void main(String[] args) throws Exception {
+        public String playgame(){
+           
                 // Create Categories
                 //KAI + GRAHAM + MILES
                 Category Sky = new Category("Sky", "You act like a teen girl who loves animals and has a scar, you live in with a shark in water");
@@ -103,7 +104,7 @@ public class Quiz {
                 int index = getMostPopularCatIndex(cList);
                 System.out.println("If you were a fortnite character, you would be " + cList[index].label + ". ");
                 System.out.println(cList[index].description);
-
+return cList[index].label;
         }
 
         public static void gameIntro() {
