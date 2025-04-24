@@ -163,6 +163,7 @@ public class RealEstateGame implements GameWriteable {
 
             if (choice.equalsIgnoreCase("exit")) {
                 System.out.println("Thanks for playing! Your final balance: $" + player.balance);
+                System.out.println("You made " + "N/A" + " purchases.");
                 break;
             }
 
