@@ -15,11 +15,11 @@ class MyApp extends StatelessWidget {
       );
 }
 
-class GreatLakesGame extends StatefulWidget {
-  const GreatLakesGame({super.key});
+class NFLGame extends StatefulWidget {
+  const NFLGame({super.key});
 
   @override
-  State<GreatLakesGame> createState() => _GreatLakesGameState();
+  State<NFLGame> createState() => _NFLGameState();
 }
 
 class HomePage extends StatelessWidget {
@@ -37,10 +37,10 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const GreatLakesGame()),
+                  MaterialPageRoute(builder: (_) => const NFLGame()),
                 );
               },
-              child: const Text('Play Great Lakes Game'),
+              child: const Text('NFL Game'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
@@ -73,8 +73,14 @@ class MLBGame extends StatelessWidget {
   }
 }
 
-class _GreatLakesGameState extends State<GreatLakesGame> {
-  final Set<String> _answers = {'superior', 'michigan', 'huron', 'erie', 'ontario'};
+class _NFLGameState extends State<NFLGame> {
+  final Set<String> _answers = {
+  'cardinals', 'falcons', 'ravens', 'bills', 'panthers', 'bears', 'bengals',
+  'browns', 'cowboys', 'broncos', 'lions', 'packers', 'texans', 'colts',
+  'jaguars', 'chiefs', 'raiders', 'chargers', 'rams', 'dolphins', 'vikings',
+  'patriots', 'saints', 'giants', 'jets', 'eagles', 'steelers', '49ers',
+  'seahawks', 'buccaneers', 'titans', 'commanders'
+};
   final Set<String> _guessed = {};
   final TextEditingController _controller = TextEditingController();
 
